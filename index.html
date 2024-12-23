@@ -157,20 +157,23 @@
                         });
                     </script>
                         <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-                             <div class="info" style="width: 600px; height: 160px;  ">
-                                <div class="cel">
-                                    Cel: <span href="cel:" id="cel-input"></span>
-                                        <table class="email">
-                                            <tr>
-                                                <td class="contact-info" >
-                                                    <br><br><br>
-                                                    Tel: 33 3001 4500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ext:   <span id="mobileno-input"></span><br><br>
-                                                    <span href="mailto:" id="email-input"></span><br>
-                                                </td>
-                                            </tr>
-                                    </table>
-                                </div>
+                        <div class="info" style="width: 600px; height: 160px;">
+                            <div class="cel">
+                                <span href="cel:" id="cel-input" class="cel-static"></span>
+                                
+                                <table class="email">
+                                    <tr>
+                                        <td class="contact-info">
+                                            <br><br><br>
+                                            <span class="tel-static"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                           <span id="mobileno-input"></span><br><br>
+                                            <span href="mailto:" id="email-input"></span><br>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
+                        </div>
+                        
                             <br>
                             <br>
                             <nav>
@@ -185,15 +188,59 @@
     <footer class="footer">
         <button type="button" id="captureButton" data-clipboard-target="#copy">
             <script>
-                document.getElementById('captureButton').addEventListener('click', function () {
-                    const captureArea = document.getElementById('copy');
-                    html2canvas(captureArea).then(function (canvas) {
-                        const downloadLink = document.createElement('a');
-                        downloadLink.href = canvas.toDataURL('image/png');
-                        downloadLink.download = 'captured_area.png';
-                        downloadLink.click();
-                    });
-                });
+         document.getElementById('captureButton').addEventListener('click', function () {
+    const captureArea = document.getElementById('copy');
+
+
+
+                // Cambiar tamaños de estos elementos estáticos antes de capturar
+    const titulo = document.querySelector('.cel');
+    const originalFontSizeTitulo = titulo.style.fontSize; // Guardar el tamaño original
+    titulo.style.fontSize = '10px'; // Cambiar el tamaño de la fuente temporalmente
+  
+
+  
+                    
+                
+
+    // Cambiar el tamaño de la fuente antes de capturar
+    const name1 = document.getElementById('name1');
+    const jobtitle1 = document.getElementById('jobtitle1');
+    const mobileno=document.getElementById('mobileno-input')
+    const email=document.getElementById('email-input')
+    const cel =document.getElementById('cel-input')
+    const telStatic = document.querySelector('.tel-static');  // Tel
+        const celStatic = document.querySelector('.cel-static');  // Cel
+        const extStatic = document.querySelector('.ext-static');  // Ext
+
+
+
+
+    name1.style.fontSize = '30px'; // Cambiar tamaño de la fuente
+    jobtitle1.style.fontSize = '30px'; // Cambiar tamaño de la fuente
+    mobileno.style.fontSize='30px'
+    email.style.fontSize='30px'
+    cel.style.fontSize='30px'
+    
+   
+
+    // Ahora capturamos el área modificada
+    html2canvas(captureArea).then(function (canvas) {
+        const downloadLink = document.createElement('a');
+        downloadLink.href = canvas.toDataURL('image/png');
+        downloadLink.download = 'captured_area.png';
+        downloadLink.click();
+    });
+
+    // Si lo deseas, también puedes restaurar el estilo original después de la captura
+    name1.style.fontSize = '160px'; // Restaurar tamaño original
+    jobtitle1.style.fontSize = '108px'; // Restaurar tamaño original
+    mobileno.style.fontSize='50px'
+    email.style.fontSize='50px'
+    cel.style.fontSize='50px'
+});
+
+
             </script>
             Descarga la firma
 
