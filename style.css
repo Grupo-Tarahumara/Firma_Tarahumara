@@ -54,9 +54,9 @@ html {
   width: 500px; /* Ancho de 300 píxeles */
   height: 100px; /* Alto de 200 píxeles */
   /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
-  margin: 440px 5px 60px 2815px;
+  margin: 400px 5px 60px 2815px;
   font-family: "Nanum Gothic", sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   color: white;
   text-align: left;
 }
@@ -66,6 +66,7 @@ html {
   height: 500px; /* Alto de 200 píxeles */
   /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
   margin: -300px 15px 60px -1300px;
+  font-size: 1px;
   
 }
 
@@ -269,14 +270,24 @@ table {
   /* Agrega tus estilos aquí */
 }
 
-.contact-info {
+ .contact-info {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 60px;
+  color: white;
+  text-align: left;
+  padding-top: 200px; /* Ajusta el valor según lo necesites */
+  width: 800px;
+  height: 160px;
+  line-height: 1.35;
+}
+t-email {
   font-family: "Nanum Gothic", sans-serif;
   font-size: 60px;
   color: white;
   text-align: left;
   padding: 0%;
   width: 800px;
-  height: 160px;
+  height: 10px;
   line-height: 1.35;
   
 }

@@ -145,32 +145,31 @@
                     </tr>
                     </table>
 
-                    <script>
-                        document.getElementById('captureButton').addEventListener('click', function () {
-                            const captureArea = document.getElementById('copy');
-                            html2canvas(captureArea).then(function (canvas) {
-                                const downloadLink = document.createElement('a');
-                                downloadLink.href = canvas.toDataURL('image/png');
-                                downloadLink.download = 'captured_area.png';
-                                downloadLink.click();
-                            });
-                        });
-                    </script>
+                
                         <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
                         <div class="info" style="width: 600px; height: 160px;">
                             <div class="cel">
-                                <span href="cel:" id="cel-input" class="cel-static"></span>
+                                <span href="cel:" id="cel-input" class="cel-static">celular</span>
                                 
                                 <table class="email">
                                     <tr>
+                                        <!-- Celda para el teléfono -->
                                         <td class="contact-info">
-                                            <br><br><br>
-                                            <span class="tel-static"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                                           <span id="mobileno-input"></span><br><br>
-                                            <span href="mailto:" id="email-input"></span><br>
+                                            <span class="tel-fijo">tel</span>
+                                            <span id="fixedphone-input">3320740052-</span>
+                                        
+
+                                            <span class="tel-static">ext</span>
+                                            <span id="mobileno-input"></span>
+                                            <br><br>
+                                            <span class="email-static"></span>
+                                            <span id="email-input"></span>
                                         </td>
+                                        
+                                      
                                     </tr>
                                 </table>
+                                
                             </div>
                         </div>
                         
@@ -188,60 +187,64 @@
     <footer class="footer">
         <button type="button" id="captureButton" data-clipboard-target="#copy">
             <script>
-         document.getElementById('captureButton').addEventListener('click', function () {
-    const captureArea = document.getElementById('copy');
-
-
-
-                // Cambiar tamaños de estos elementos estáticos antes de capturar
-    const titulo = document.querySelector('.cel');
-    const originalFontSizeTitulo = titulo.style.fontSize; // Guardar el tamaño original
-    titulo.style.fontSize = '10px'; // Cambiar el tamaño de la fuente temporalmente
-  
-
-  
+                document.getElementById('captureButton').addEventListener('click', function () {
+                    const captureArea = document.getElementById('copy');
                     
+                    // Cambiar el tamaño de la fuente antes de capturar
+                    const name1 = document.getElementById('name1');
+                    const jobtitle1 = document.getElementById('jobtitle1');
+                    const mobileno = document.getElementById('mobileno-input');
+                    const celFijo=document.getElementById('fixedphone-input');
+                    const telStatic = document.querySelector('.tel-static');
+                    const telFijo=document.querySelector('.tel-fijo')
+                    const email = document.getElementById('email-input');
+                    const cel = document.getElementById('cel-input');
+                    const celStatic = document.querySelector('.cel-static');
+                    const extStatic = document.querySelector('.ext-static');
                 
-
-    // Cambiar el tamaño de la fuente antes de capturar
-    const name1 = document.getElementById('name1');
-    const jobtitle1 = document.getElementById('jobtitle1');
-    const mobileno=document.getElementById('mobileno-input')
-    const email=document.getElementById('email-input')
-    const cel =document.getElementById('cel-input')
-    const telStatic = document.querySelector('.tel-static');  // Tel
-        const celStatic = document.querySelector('.cel-static');  // Cel
-        const extStatic = document.querySelector('.ext-static');  // Ext
-
-
-
-
-    name1.style.fontSize = '30px'; // Cambiar tamaño de la fuente
-    jobtitle1.style.fontSize = '30px'; // Cambiar tamaño de la fuente
-    mobileno.style.fontSize='30px'
-    email.style.fontSize='30px'
-    cel.style.fontSize='30px'
-    
-   
-
-    // Ahora capturamos el área modificada
-    html2canvas(captureArea).then(function (canvas) {
-        const downloadLink = document.createElement('a');
-        downloadLink.href = canvas.toDataURL('image/png');
-        downloadLink.download = 'captured_area.png';
-        downloadLink.click();
-    });
-
-    // Si lo deseas, también puedes restaurar el estilo original después de la captura
-    name1.style.fontSize = '160px'; // Restaurar tamaño original
-    jobtitle1.style.fontSize = '108px'; // Restaurar tamaño original
-    mobileno.style.fontSize='50px'
-    email.style.fontSize='50px'
-    cel.style.fontSize='50px'
-});
-
-
+                    // Cambiar tamaño de la fuente
+                    name1.style.fontSize = '30px';
+                    jobtitle1.style.fontSize = '30px';
+                    mobileno.style.fontSize = '10px';
+                    celFijo.style.fontSize = '10px';
+                    telStatic.style.fontSize = '10px';
+                    telFijo.style.fontSize = '10px';
+                    email.style.fontSize = '30px';
+                    cel.style.fontSize = '30px';
+                
+                    // Cambiar la alineación (puedes elegir entre 'left', 'center' o 'right')
+                    name1.style.textAlign = 'left';  // Alineación de "name1"
+                    jobtitle1.style.textAlign = 'right';  // Alineación de "jobtitle1"
+                    mobileno.style.textAlign = 'left';  // Alineación de "mobileno" (corregido)
+                    telStatic.style.textAlign = 'left';  // Alineación de "telStatic"
+                    telFijo.style.textAlign = 'left';
+                    email.style.textAlign = 'right';  // Alineación de "email"
+                    cel.style.textAlign = 'center';  // Alineación de "cel"
+                    
+                    // Mover los elementos con márgenes
+                    mobileno.style.marginLeft = '50px';  // Mover "mobileno" hacia la izquierda
+                    telStatic.style.marginRight = '100px';  // Desplazar "telStatic" a la derecha
+                    telFijo.style.marginRight = '1px';
+                    email.style.marginRight = '50px';  // Desplazar "email" a la izquierda
+                    cel.style.marginRight = '20px';  // Desplazar "cel" a la izquierda
+                
+                    // Ahora capturamos el área modificada
+                    html2canvas(captureArea).then(function (canvas) {
+                        const downloadLink = document.createElement('a');
+                        downloadLink.href = canvas.toDataURL('image/png');
+                        downloadLink.download = 'captured_area.png';
+                        downloadLink.click();
+                    });
+                
+                    // Restaurar el estilo original después de la captura
+                    name1.style.fontSize = '160px'; // Restaurar tamaño original
+                    jobtitle1.style.fontSize = '108px'; // Restaurar tamaño original
+                    mobileno.style.fontSize = '50px';
+                    email.style.fontSize = '50px';
+                    cel.style.fontSize = '50px';
+                });
             </script>
+            
             Descarga la firma
 
         </button>
