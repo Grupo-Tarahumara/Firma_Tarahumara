@@ -142,6 +142,7 @@
                         </div>
                         <br>
                         <br>
+                        </div>
                         <nav>
                             <ul class="menu-horizontal">
                                 
@@ -153,8 +154,11 @@
     </article>
 
     <footer class="footer">
+        <button type="button" id="captureButton">
             Descarga la firma
         </button>
+            
+      
     </footer>
 
     <script>
@@ -165,7 +169,7 @@
                     // Crea una imagen con la URL generada
                     var img = new Image();
                     img.src = dataUrl;
-                    document.body.appendChild(img);  // Añadir la imagen al body
+                    //document.body.appendChild(img); 
 
                     // Crear un enlace de descarga para la imagen capturada
                     const downloadLink = document.createElement('a');
