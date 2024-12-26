@@ -39,12 +39,12 @@ html {
   background-size: cover;
   font-family: "Nanum Gothic", sans-serif;
   width: 4600.5px;
-  height: 985.5px;
+  height: 800px;
 }
 
 .info {
   width: 500px; /* Ancho de 300 píxeles */
-  height: 100px; /* Alto de 200 píxeles */
+  height: 80px; /* Alto de 200 píxeles */
   margin: -130px 15px 60px 750px;
   
 }
@@ -55,7 +55,7 @@ html {
   /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
   margin: 420px 5px 60px 2850px;
   font-family: "Nanum Gothic", sans-serif;
-  font-size: 50px;
+  font-size: 55px;
   color: white;
   text-align: left;
 }
