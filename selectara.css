@@ -3,17 +3,15 @@
 .grid-container > * {
   box-shadow: 10px 10px 10px 15px rgb(45, 169, 185);
   border-radius: 40px;
-  padding: 100px;
+  
 }
 
 /* Estilos para el título */
 .titulo {
   font-size: 150px;
-  font-weight: bold;
   text-align: center;
   color: #24bdb5; /* Color de texto personalizado */
   text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
-  padding: 20px; /* Espacio alrededor del título */
   
 }
 
@@ -37,7 +35,6 @@ html {
   background-image: url(./imagenes/SELECTARA.png);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Nanum Gothic", sans-serif;
   width: 4600.5px;
   height: 800px;
 }
@@ -54,7 +51,6 @@ html {
   height: 100px; /* Alto de 200 píxeles */
   /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
   margin: 420px 5px 60px 2850px;
-  font-family: "Nanum Gothic", sans-serif;
   font-size: 55px;
   color: white;
   text-align: left;
@@ -118,14 +114,12 @@ html {
 }
 * {
   padding: 0px;
-  font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
   box-sizing: border-box;
   
 }
 
 h1 {
-  font-family: "Nanum Gothic", sans-serif;
   color: #000000;
 }
 
@@ -254,9 +248,6 @@ table {
     margin-top: -10px;
     padding: 0;
 }
-.gotham-narrow-text {
-  font-family: "Nanum Gothic", sans-serif;
-}
 
 /* Estilos para pantallas grandes */
 @media (min-width: 7608px) {
@@ -269,7 +260,6 @@ table {
 }
 
 .contact-info {
-  font-family: "Nanum Gothic", sans-serif;
   font-size: 50px;
   color: white;
   text-align: left;
@@ -289,5 +279,4 @@ table {
 .small-text {
   font-size: 30px;
   color: white;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
