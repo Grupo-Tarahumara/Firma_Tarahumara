@@ -31,12 +31,13 @@ html {
 }
 
 #copy {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   background-image: url(./imagenes/SELECTARA.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 4600.5px;
-  height: 800px;
+  height: 985.5px;
+  
 }
 
 .info {
@@ -245,8 +246,6 @@ table {
 .datos {
     margin-left: 2010px;
     margin-right: auto;
-    margin-top: -10px;
-    padding: 0;
 }
 
 /* Estilos para pantallas grandes */

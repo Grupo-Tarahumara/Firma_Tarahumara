@@ -124,51 +124,51 @@
     
             </div> -->
 
-            <div id="copy" style="width: 4900.5px; height: 1100.5px;">
-
+            <div id="copy">
+            
+                <!-- <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+                </style> -->
+    
                 <table class="datos">
                     <tr>
                         <td>
+                            <br>
                             <span
-                            style="text-align: right; font-size: 160px; color: white; text-transform: uppercase"
-                            id="name1"></span><br>
-                            &nbsp;<span
-                            style="font: size 108px; color:white; text-transform: uppercase;"
-                            id="jobtitle1"></span><br>
+                                style="text-align: right; font-size: 160px; color: white; text-transform: uppercase"
+                                id="name1"></span><br>
+                                &nbsp;<span
+                                style="font: size 108px;color:white; text-transform: uppercase;"
+                                id="jobtitle1"></span><br>
                               
                         </td>
                     </tr>
                     </table>
-
-                    <script>
-                        document.getElementById('captureButton').addEventListener('click', function () {
-                            const captureArea = document.getElementById('copy');
-                            html2canvas(captureArea).then(function (canvas) {
-                                const downloadLink = document.createElement('a');
-                                downloadLink.href = canvas.toDataURL('image/png');
-                                downloadLink.download = 'captured_area.png';
-                                downloadLink.click();
-                            });
-                        });
-                    </script>
-                              <div style="font-size: 80px; color: white; margin-left: 2480px;">
-                                <div style="display: flex; align-items: left; justify-content: space-between;
-                                ">
-                                    <div>
-                                        Tel: 33 3001 4500
-                                    </div>
-                                    <div style="margin-left: -130px;">
-                                        Ext: <span id="mobileno-input"></span>
-                                    </div>
-                                    <div style="margin-right: 480px;">
-                                        Cel: <span id="cel-input"></span>
-                                    </div>
+                        <div style="font-size: 80px; color: white; margin-left: 2250px;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 280px;">
+                                <!-- Teléfono -->
+                                <div style="flex: 1; text-align: left; margin-right: 50px;">
+                                    Tel: 33 3001 4500
                                 </div>
-                                <div style="margin-top: 90px; margin-left: 20px; color: white; font-size: 65px;">
-                                    <span id="email-input"></span>
+                                
+                                <!-- Extensión -->
+                                <div style="flex: 1; text-align: left; margin-right: -70px;">
+                                    Ext: <span id="mobileno-input" style="display: inline-block; min-width: 100px;">---</span>
+                                </div>
+                                
+                                <!-- Celular -->
+                                <div style="flex: 1; text-align: left; margin-right: 620px;">
+                                    Cel: <span id="cel-input" style="display: inline-block; min-width: 150px;">---</span>
                                 </div>
                             </div>
-            </div>
+                            
+                            <!-- Correo electrónico -->
+                            <div style="margin-top: 90px; color: white; font-size: 80px; text-align: left;">
+                                <span id="email-input" style="display: inline-block; min-width: 300px;">---</span>
+                            </div>
+                        </div>
+                        
+                    </div>
                             <nav>
                                 <ul class="menu-horizontal">
                                     
@@ -196,7 +196,7 @@
                     // Crear un enlace de descarga para la imagen capturada
                     const downloadLink = document.createElement('a');
                     downloadLink.href = dataUrl;
-                    downloadLink.download = 'captured_area.png';
+                    downloadLink.download = 'FirmaSelectara.png';
                     downloadLink.click();
                 })
                 .catch(function (error) {
